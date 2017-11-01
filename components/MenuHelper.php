@@ -186,7 +186,7 @@ class MenuHelper
      * Normalize menu
      * @param  array $assigned
      * @param  array $menus
-     * @param  Closure $callback
+     * @param  \Closure $callback
      * @param  integer $parent
      * @return array
      */
@@ -203,6 +203,7 @@ class MenuHelper
                 } else {
                     $item = [
                         'label' => $menu['name'],
+                        'icon' => $menu['icon'],
                         'url' => static::parseRoute($menu['route']),
                     ];
                     if ($menu['children'] != []) {

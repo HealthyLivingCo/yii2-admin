@@ -53,6 +53,7 @@ class Menu extends \yii\db\ActiveRecord
     {
         return [
             [['name'], 'required'],
+            [['icon'], 'string'],
             [['parent_name'], 'in',
                 'range' => static::find()->select(['name'])->column(),
                 'message' => 'Menu "{value}" not found.'],
@@ -70,7 +71,7 @@ class Menu extends \yii\db\ActiveRecord
     /**
      * Use to loop detected.
      */
-    public function filterParent()
+    public function filterParent()s
     {
         $parent = $this->parent;
         $db = static::getDb();
@@ -94,6 +95,7 @@ class Menu extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('rbac-admin', 'ID'),
             'name' => Yii::t('rbac-admin', 'Name'),
+            'icon' => Yii::t('rbac-admin', 'Icon'),
             'parent' => Yii::t('rbac-admin', 'Parent'),
             'parent_name' => Yii::t('rbac-admin', 'Parent Name'),
             'route' => Yii::t('rbac-admin', 'Route'),

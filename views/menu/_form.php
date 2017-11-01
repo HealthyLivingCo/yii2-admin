@@ -25,6 +25,8 @@ $this->registerJs($this->render('_script.js'));
         <div class="col-sm-6">
             <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
 
+            <?= $form->field($model, 'icon')->textInput(['maxlength' => 128]) ?>
+
             <?= $form->field($model, 'parent_name')->textInput(['id' => 'parent_name']) ?>
 
             <?= $form->field($model, 'route')->textInput(['id' => 'route']) ?>
