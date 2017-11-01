@@ -71,7 +71,7 @@ class Menu extends \yii\db\ActiveRecord
     /**
      * Use to loop detected.
      */
-    public function filterParent()s
+    public function filterParent()
     {
         $parent = $this->parent;
         $db = static::getDb();
